@@ -34,7 +34,7 @@ License: CC-BY
 
 # Data Model
 
-The Drosophila Time Series (DTS) Data Model describes single time series experiments which are grouped into projects. Project files contain data items that are exclusively meta-data. The YAML project files contain the grouping information linking each experiment to the project, as well as a project description and experimental comments. These files also contain information about which type of evaluation the project was designed to be used with. Experiment files contain a meta-data header in XML and time series data in CSV.
+The Drosophila Time Series (DTS) Data Model describes single time series experiments which are grouped into data sets. Data set files contain data items that are exclusively meta-data. The YAML data set files contain the grouping information linking each experiment to the data set, as well as a data set description and experimental comments. These files also contain information about which type of evaluation the data set was designed to be used with. Experiment files contain a meta-data header in XML and time series data in CSV.
 
 ##  Data items in Experiment files
 
@@ -214,13 +214,13 @@ Each variable is described by
 
 The **CSV_data** tags enclose the raw time series data.
 
-## Data items in project files
+## Data items in data set files
 
-Project files reside in the same directory as the data files and contain the experimental design of a project by listing the different data files in the experimental groups. While data files are written by software, these project files are written by humans. As YAML is easier to read for humans than XML, data files are in XML and project files in YAML. The syntax loosely follows the Frictionless Data format at [https://specs.frictionlessdata.io/data-package](https://specs.frictionlessdata.io/data-package)
+Data set files reside in the same directory as the data files and contain the experimental design of a data set by listing the different data files in the experimental groups. While data files are written by software, these data set files are written by humans. As YAML is easier to read for humans than XML, data files are in XML and data set files in YAML. The syntax loosely follows the Frictionless Data format at [https://specs.frictionlessdata.io/data-package](https://specs.frictionlessdata.io/data-package)
 
 ### Data item type: "experiment"
 
-Each project file starts with the **type **of the experiment (one of ‘torquemeter’ or ‘joystick’), a disambiguating **id **(SSRN, if available), a machine-readable and URL-usable **name** of the experiment, a free text **title** and a free text **description **of the experiment 
+Each data set file starts with the **type **of the experiment (one of ‘torquemeter’ or ‘joystick’), a disambiguating **id **(SSRN, if available), a machine-readable and URL-usable **name** of the experiment, a free text **title** and a free text **description **of the experiment 
 
 ### Data item type "licenses"
 
@@ -228,7 +228,7 @@ The type **licenses** is characterized by a **name** and a **URI** for each lice
 
 ### Data item type "author"
 
-The **author **of the project file is contained in the following fields:
+The **author **of the data set file is contained in the following fields:
 
 name	An identifier string. Lower case characters with ., _, - and / are allowed. This is ideally a url-usable and human-readable name
 
@@ -278,11 +278,11 @@ Descriptor of media type. Either  text/csv/xml or text/yaml
 
 ### Data item type "finished"
 
-Empty field. Presence or absence indicates that the project is concluded or not and is used to create a permanent identifier when published.
+Empty field. Presence or absence indicates that the data set is concluded or not and is used to create a permanent identifier when published.
 
 ### Data item type "epid"
 
-Integer value that is created automatically by the synchronization procedure that publishes the projects.
+Integer value that is created automatically by the synchronization procedure that publishes the data sets.
 
 # Values for the ‘arena’ parameter in data files
 
